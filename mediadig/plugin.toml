@@ -1,0 +1,26 @@
+id = "tzavo/mediadig"
+name = "mediadig"
+version = "1.0.0"
+plugin_api = 24
+author = "tzavo"
+license = "MIT"
+icon = "search"
+description = "Search memes, videos and documents by caption text or description through the local mediadig daemon."
+dependencies = ["curl", "mpv", "xdg-open"]
+tags = ["launcher", "media", "utility"]
+
+[[launcher_provider]]
+id = "search"
+entry = "search.luau"
+prefix = "md"
+glyph = "search"
+include_in_global_search = false
+debounce_ms = 150
+
+[[launcher_provider]]
+id = "global"
+entry = "global.luau"
+prefix = "mdg"
+glyph = "search"
+include_in_global_search = true
+debounce_ms = 200

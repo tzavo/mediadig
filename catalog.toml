@@ -1,0 +1,10 @@
+[[plugin]]
+id = "tzavo/mediadig"
+name = "mediadig"
+version = "1.0.0"
+author = "tzavo"
+license = "MIT"
+icon = "search"
+description = "Search memes, videos and documents by caption text or description through the local mediadig daemon."
+plugin_api = 24
+tags = ["launcher", "media", "utility"]

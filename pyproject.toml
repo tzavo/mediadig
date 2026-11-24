@@ -1,0 +1,31 @@
+[project]
+name = "mediadig"
+version = "0.1.0"
+description = "Caption and meaning search for memes, videos and documents"
+readme = "README.md"
+authors = [
+    { name = "tzavo", email = "47925109+tzavo@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+  "numpy>=2.2",
+  "pillow>=11",
+  "rapidfuzz>=3.14",
+  "watchfiles>=1.0",
+  "pypdfium2>=5",
+  "python-docx>=1.2",
+  "rapidocr==3.10.0",
+  "onnxruntime-gpu[cuda,cudnn]==1.32.0",
+]
+
+[project.scripts]
+mediadig = "mediadig.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.11.21,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
